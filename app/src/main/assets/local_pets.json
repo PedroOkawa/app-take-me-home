@@ -1,0 +1,172 @@
+[
+  {
+    "id": "1",
+    "name": "Sir. Cute Doggo",
+    "description": "He is a lord and could be yours",
+    "adoption_fee": 10.0,
+    "gender": "male",
+    "image": "https://image.shutterstock.com/shutterstock/photos/1424153078/display_1500/stock-photo-pure-youth-crazy-english-cocker-spaniel-young-dog-is-posing-cute-playful-white-braun-doggy-or-pet-1424153078.jpg",
+    "breed": "English Cocker Spaniel",
+    "type": "dog",
+    "birthdate": 1551099083000,
+    "contact_number": "+1 987654321",
+    "vaccinated": true,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "2",
+    "name": "Lady Dog",
+    "description": "She is the cutest lady of all",
+    "adoption_fee": 10.0,
+    "gender": "female",
+    "image": "https://image.shutterstock.com/shutterstock/photos/587562362/display_1500/stock-photo-dog-587562362.jpg",
+    "breed": "Cute Mutt",
+    "type": "dog",
+    "birthdate": 1525438283000,
+    "contact_number": "+1 987654321",
+    "vaccinated": true,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "3",
+    "name": "Judging Doggo",
+    "description": "- Does it bite?\n- Nope. It judges you.",
+    "adoption_fee": 10.0,
+    "gender": "male",
+    "image": "https://image.shutterstock.com/shutterstock/photos/1708169875/display_1500/stock-photo-the-head-of-the-hungarian-hound-female-hungarian-dog-vizsla-on-meadow-pet-dog-s-eyes-1708169875.jpg",
+    "breed": "Hungarian Hound",
+    "type": "dog",
+    "birthdate": 1505047883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "4",
+    "name": "The study girl",
+    "description": "Please, I'm studying, I don't have time right now unless you're gonna take me home.",
+    "adoption_fee": 10.0,
+    "gender": "female",
+    "image": "https://image.shutterstock.com/shutterstock/photos/1660149661/display_1500/stock-photo-corgi-dog-puppy-with-glasses-1660149661.jpg",
+    "breed": "Corgi",
+    "type": "dog",
+    "birthdate": 1560343883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "5",
+    "name": "Prince of Persia",
+    "description": "I can time travel through the sands of time.\nNo, just kidding, I can't.\n\nBut I'm super cute.",
+    "adoption_fee": 10.0,
+    "gender": "male",
+    "image": "https://image.shutterstock.com/shutterstock/photos/91229702/display_1500/stock-photo-persian-cat-sitting-in-front-of-white-background-91229702.jpg",
+    "breed": "Persian",
+    "type": "cat",
+    "birthdate": 1525438283000,
+    "contact_number": "+1 987654321",
+    "vaccinated": true,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "6",
+    "name": "Hello Kitty",
+    "description": "Hello human!",
+    "adoption_fee": 10.0,
+    "gender": "female",
+    "image": "https://image.shutterstock.com/image-photo/cute-cat-lying-on-his-600w-572338033.jpg",
+    "breed": "British Shorthair",
+    "type": "cat",
+    "birthdate": 1551099083000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "7",
+    "name": "Sleepy Cat",
+    "description": "Turn off the lights after leaving, please.",
+    "adoption_fee": 10.0,
+    "gender": "female",
+    "image": "https://image.shutterstock.com/shutterstock/photos/235089946/display_1500/stock-photo-cute-little-red-kitten-sleeps-on-fur-white-blanket-235089946.jpg",
+    "breed": "British Shorthair",
+    "type": "cat",
+    "birthdate": 1505047883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": true,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "8",
+    "name": "Duck Dodgers",
+    "description": "Well, you're arguments are invalid because I'm a duck, and it is super cute.",
+    "adoption_fee": 10.0,
+    "gender": "male",
+    "image": "https://image.shutterstock.com/shutterstock/photos/235089946/display_1500/stock-photo-cute-little-red-kitten-sleeps-on-fur-white-blanket-235089946.jpg",
+    "breed": "Duck",
+    "type": "other",
+    "birthdate": 1505047883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "9",
+    "name": "General Fluffy",
+    "description": "Really?! There's no way you won't take me home, I'm a goat making this super cute face",
+    "adoption_fee": 10.0,
+    "gender": "male",
+    "image": "https://image.shutterstock.com/image-photo/goat-600w-220755979.jpg",
+    "breed": "Goat",
+    "type": "other",
+    "birthdate": 1505047883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  },
+  {
+    "id": "10",
+    "name": "Piggy",
+    "description": "Oinc oinc!\nI promise I won't eat your furniture",
+    "adoption_fee": 10.0,
+    "gender": "female",
+    "image": "https://image.shutterstock.com/image-photo/mini-pig-walking-on-field-600w-1206707998.jpg",
+    "breed": "Pig",
+    "type": "other",
+    "birthdate": 1505047883000,
+    "contact_number": "+1 987654321",
+    "vaccinated": false,
+    "location": {
+      "lat": 37.396894,
+      "long": -122.075509
+    }
+  }
+]

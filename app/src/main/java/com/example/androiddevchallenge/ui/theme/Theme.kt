@@ -17,33 +17,38 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
 private val DarkColorPalette = darkColors(
-    primary = purple200,
-    primaryVariant = purple700,
-    secondary = teal200
+    primary = blueGrey900,
+    primaryVariant = blueGrey800,
+    secondary = teal200,
+    background = blueGrey1000,
+    surface = teal300,
+    onPrimary = blueGrey50,
+    onSecondary = teal900,
+    onBackground = blueGrey50,
+    onSurface = teal900
 )
 
 private val LightColorPalette = lightColors(
-    primary = purple500,
-    primaryVariant = purple700,
-    secondary = teal200
-
-        /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primary = indigo400,
+    primaryVariant = indigo500,
+    secondary = deepPurple100,
+    secondaryVariant = deepPurple200,
+    background = indigo50,
+    surface = indigo50,
+    onPrimary = indigo50,
+    onSecondary = deepPurple900,
+    onBackground = deepPurple900,
+    onSurface = deepPurple900
 )
 
 @Composable
-fun MyTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
+fun TakeMeHomeTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {

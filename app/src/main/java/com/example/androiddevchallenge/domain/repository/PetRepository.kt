@@ -13,25 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.domain.repository
 
-import androidx.compose.ui.graphics.Color
+import com.example.androiddevchallenge.data.model.PetEntity
+import io.reactivex.Single
 
-val indigo50 = Color(0xFFE8EAF6)
-val indigo300 = Color(0xFF8E99F3)
-val indigo400 = Color(0xFF5C6BC0)
-val indigo500 = Color(0xFF26418F)
+interface PetRepository {
 
-val deepPurple50 = Color(0xFFD1C4E9)
-val deepPurple100 = Color(0xFFFFF7FF)
-val deepPurple200 = Color(0xFFA094B7)
-val deepPurple900 = Color(0xFF311B92)
-
-val blueGrey50 = Color(0xFFECEFF1)
-val blueGrey800 = Color(0xFF4F5B62)
-val blueGrey900 = Color(0xFF263238)
-val blueGrey1000 = Color(0xFF000A12)
-
-val teal200 = Color(0xFF80CBC4)
-val teal300 = Color(0xFF4F9A94)
-val teal900 = Color(0xFF004D40)
+    fun getPets(): Single<List<PetEntity>>
+}
