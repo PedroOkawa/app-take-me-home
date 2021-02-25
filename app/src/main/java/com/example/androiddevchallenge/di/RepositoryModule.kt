@@ -13,24 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.data.di
+package com.example.androiddevchallenge.di
 
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import com.example.androiddevchallenge.data.repository.LocalPetRepository
+import com.example.androiddevchallenge.domain.repository.PetRepository
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 
 @InstallIn(SingletonComponent::class)
 @Module
-class DataModule {
+abstract class RepositoryModule {
 
-    @Provides
-    fun providesMoshi(): Moshi {
-        return Moshi
-            .Builder()
-            .add(KotlinJsonAdapterFactory())
-            .build()
-    }
+    @Binds
+    abstract fun bindsPetsRepository(localPetRepository: LocalPetRepository): PetRepository
 }
