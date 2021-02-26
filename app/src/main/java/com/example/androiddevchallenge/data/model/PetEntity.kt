@@ -25,7 +25,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class PetEntity(
     @Json(name = "id")
-    val id: String,
+    val id: Int,
     @Json(name = "name")
     val name: String,
     @Json(name = "description")

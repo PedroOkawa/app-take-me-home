@@ -29,7 +29,7 @@ private val Montserrat = FontFamily(
     Font(R.font.montserrat_semibold, FontWeight.W600)
 )
 
-val JetpackArchTypography = Typography(
+val TakeMeHomeTypography = Typography(
     h1 = TextStyle(
         fontFamily = Montserrat,
         fontWeight = FontWeight.W700,

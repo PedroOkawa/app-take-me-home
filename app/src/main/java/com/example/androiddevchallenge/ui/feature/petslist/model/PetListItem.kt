@@ -13,35 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.domain.model
+package com.example.androiddevchallenge.ui.feature.petslist.model
 
-data class PetDomain(
+import com.example.androiddevchallenge.domain.model.PetDomain
+import com.example.androiddevchallenge.ui.feature.model.PetGenderItem
+import com.example.androiddevchallenge.ui.feature.model.PetTypeItem
+import com.example.androiddevchallenge.ui.feature.model.toUiItem
+
+data class PetListItem(
     val id: Int,
     val name: String,
-    val description: String,
-    val adoptionFee: Float,
-    val gender: PetGenderDomain,
+    val gender: PetGenderItem,
     val image: String,
     val breed: String,
-    val type: PetTypeDomain,
-    val birthdate: Long,
-    val contactNumber: String,
-    val vaccinated: Boolean,
-    val location: LocationDomain
+    val type: PetTypeItem,
 )
 
-enum class PetGenderDomain {
-    FEMALE,
-    MALE
+fun PetDomain.toPetListItem(): PetListItem {
+    return PetListItem(
+        id = id,
+        name = name,
+        gender = gender.toUiItem(),
+        image = image,
+        breed = breed,
+        type = type.toUiItem()
+    )
 }
-
-enum class PetTypeDomain {
-    DOG,
-    CAT,
-    OTHER
-}
-
-data class LocationDomain(
-    val latitude: Double,
-    val longitude: Double
-)

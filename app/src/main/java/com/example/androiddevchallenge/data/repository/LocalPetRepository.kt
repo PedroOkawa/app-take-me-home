@@ -26,6 +26,7 @@ import javax.inject.Singleton
 
 private val LOCAL_PETS_JSON_FILE_NAME = "local_pets.json"
 private val NULL_POINTER_JSON_MESSAGE = "The json file name is invalid!"
+private val NO_SUCH_ELEMENT_MESSAGE = "The pet you requested doesn't exist!"
 
 @Singleton
 class LocalPetRepository @Inject constructor(
@@ -35,6 +36,15 @@ class LocalPetRepository @Inject constructor(
 
     override fun getPets(): Single<List<PetEntity>> {
         return Single.fromCallable { readPetsJson() }
+    }
+
+    override fun getPet(id: Int): Single<PetEntity> {
+        return Single.fromCallable {
+            readPetsJson()
+                .firstOrNull { petEntity ->
+                    petEntity.id == id
+                } ?: throw NoSuchElementException(NO_SUCH_ELEMENT_MESSAGE)
+        }
     }
 
     private fun readPetsJson(): List<PetEntity> {

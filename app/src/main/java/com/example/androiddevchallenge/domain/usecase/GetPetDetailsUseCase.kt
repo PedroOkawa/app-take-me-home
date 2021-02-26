@@ -13,13 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.domain.repository
+package com.example.androiddevchallenge.domain.usecase
 
-import com.example.androiddevchallenge.data.model.PetEntity
+import com.example.androiddevchallenge.domain.model.PetDomain
+import com.example.androiddevchallenge.domain.repository.PetRepository
 import io.reactivex.Single
+import javax.inject.Inject
 
-interface PetRepository {
+class GetPetDetailsUseCase @Inject constructor(
+    private val petRepository: PetRepository
+) {
 
-    fun getPets(): Single<List<PetEntity>>
-    fun getPet(id: Int): Single<PetEntity>
+    fun execute(petId: Int): Single<PetDomain> {
+        return petRepository
+            .getPet(petId)
+            .map { petEntity ->
+                petEntity.toDomain()
+            }
+    }
 }

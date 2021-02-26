@@ -28,10 +28,8 @@ val deepPurple200 = Color(0xFFA094B7)
 val deepPurple900 = Color(0xFF311B92)
 
 val blueGrey50 = Color(0xFFECEFF1)
+val blueGrey400 = Color(0xFF8EACBB)
+val blueGrey500 = Color(0xFF607D8B)
 val blueGrey800 = Color(0xFF4F5B62)
 val blueGrey900 = Color(0xFF263238)
 val blueGrey1000 = Color(0xFF000A12)
-
-val teal200 = Color(0xFF80CBC4)
-val teal300 = Color(0xFF4F9A94)
-val teal900 = Color(0xFF004D40)

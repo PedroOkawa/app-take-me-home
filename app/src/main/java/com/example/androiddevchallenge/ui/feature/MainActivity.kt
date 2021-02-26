@@ -19,31 +19,29 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.androiddevchallenge.domain.model.PetDomain
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.androiddevchallenge.ui.feature.composable.MainNavGraph
+import com.example.androiddevchallenge.ui.feature.petdetails.PetDetailsViewModel
+import com.example.androiddevchallenge.ui.feature.petslist.PetsListViewModel
 import com.example.androiddevchallenge.ui.theme.TakeMeHomeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val petsListViewModel: PetsListViewModel by viewModels()
+    private val petDetailsViewModel: PetDetailsViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             TakeMeHomeTheme {
-                val state = viewModel.state.collectAsState()
-                MyApp(state)
+                MainFeature(
+                    petsListViewModel,
+                    petDetailsViewModel
+                )
             }
         }
     }
@@ -51,18 +49,21 @@ class MainActivity : AppCompatActivity() {
 
 // Start building your app here!
 @Composable
-fun MyApp(state: State<List<PetDomain>>) {
-    val testState by remember { state }
-    Surface(color = MaterialTheme.colors.surface) {
-        Text(text = testState.firstOrNull()?.name.orEmpty())
-    }
+fun MainFeature(
+    petsListViewModel: PetsListViewModel = viewModel(),
+    petDetailsViewModel: PetDetailsViewModel = viewModel()
+) {
+    MainNavGraph(
+        petsListViewModel = petsListViewModel,
+        petDetailsViewModel = petDetailsViewModel
+    )
 }
 
 @Preview("Light Theme", widthDp = 360, heightDp = 640)
 @Composable
 fun LightPreview() {
     TakeMeHomeTheme {
-        MyApp(mutableStateOf(emptyList()))
+        MainFeature()
     }
 }
 
@@ -70,6 +71,6 @@ fun LightPreview() {
 @Composable
 fun DarkPreview() {
     TakeMeHomeTheme(darkTheme = true) {
-        MyApp(mutableStateOf(emptyList()))
+        MainFeature()
     }
 }

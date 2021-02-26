@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Sir. Cute Doggo",
-    "description": "He is a lord and could be yours",
+    "description": "I'm a lord and could be yours",
     "adoption_fee": 10.0,
     "gender": "male",
     "image": "https://image.shutterstock.com/shutterstock/photos/1424153078/display_1500/stock-photo-pure-youth-crazy-english-cocker-spaniel-young-dog-is-posing-cute-playful-white-braun-doggy-or-pet-1424153078.jpg",
@@ -19,7 +19,7 @@
   {
     "id": "2",
     "name": "Lady Dog",
-    "description": "She is the cutest lady of all",
+    "description": "I'm is the cutest lady of all times",
     "adoption_fee": 10.0,
     "gender": "female",
     "image": "https://image.shutterstock.com/shutterstock/photos/587562362/display_1500/stock-photo-dog-587562362.jpg",
@@ -52,7 +52,7 @@
   },
   {
     "id": "4",
-    "name": "The study girl",
+    "name": "The study lady",
     "description": "Please, I'm studying, I don't have time right now unless you're gonna take me home.",
     "adoption_fee": 10.0,
     "gender": "female",
@@ -124,7 +124,7 @@
     "description": "Well, you're arguments are invalid because I'm a duck, and it is super cute.",
     "adoption_fee": 10.0,
     "gender": "male",
-    "image": "https://image.shutterstock.com/shutterstock/photos/235089946/display_1500/stock-photo-cute-little-red-kitten-sleeps-on-fur-white-blanket-235089946.jpg",
+    "image": "https://image.shutterstock.com/image-photo/small-newborn-ducklings-walking-on-600w-1808566561.jpg",
     "breed": "Duck",
     "type": "other",
     "birthdate": 1505047883000,

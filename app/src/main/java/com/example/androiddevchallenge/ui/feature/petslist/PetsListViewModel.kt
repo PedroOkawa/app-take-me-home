@@ -13,11 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.feature
+package com.example.androiddevchallenge.ui.feature.petslist
 
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.domain.model.PetDomain
 import com.example.androiddevchallenge.domain.usecase.GetPetsUseCase
+import com.example.androiddevchallenge.ui.feature.petslist.model.PetListItem
+import com.example.androiddevchallenge.ui.feature.petslist.model.toPetListItem
 import com.example.androiddevchallenge.utils.SchedulerProvider
 import com.example.androiddevchallenge.utils.addToDisposable
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -26,16 +28,21 @@ import kotlinx.coroutines.flow.StateFlow
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
+class PetsListViewModel @Inject constructor(
     private val getPetsUseCase: GetPetsUseCase,
     private val schedulerProvider: SchedulerProvider
 ) : ViewModel() {
 
-    private val _state = MutableStateFlow<List<PetDomain>>(emptyList())
-    val state: StateFlow<List<PetDomain>>
-        get() = _state
+    sealed class ViewIntent {
+        data class Success(val pets: List<PetListItem>) : ViewIntent()
+        object Empty : ViewIntent()
+        object Error : ViewIntent()
+    }
 
-    init {
+    private val _state = MutableStateFlow<ViewIntent>(ViewIntent.Empty)
+    val state: StateFlow<ViewIntent> = _state
+
+    fun getPetsList() {
         addToDisposable(
             getPetsUseCase
                 .execute()
@@ -49,10 +56,11 @@ class MainViewModel @Inject constructor(
     }
 
     private fun onGetPetsSuccess(petsDomain: List<PetDomain>) {
-        _state.value = petsDomain
+        _state.value = ViewIntent.Success(petsDomain.map { it.toPetListItem() })
     }
 
     private fun onGetPetsError(throwable: Throwable) {
         throwable.printStackTrace()
+        _state.value = ViewIntent.Error
     }
 }
