@@ -27,6 +27,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.Button
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -153,18 +154,31 @@ fun PetDetailsSuccess(petDetails: PetDetailsItem) {
             PetGenderItem.FEMALE -> R.string.pets_list_gender_female
             PetGenderItem.MALE -> R.string.pets_list_gender_male
         }
-        Text(
-            text = petDetails.name,
-            style = MaterialTheme.typography.h5,
-            color = MaterialTheme.colors.onSecondary,
-            overflow = TextOverflow.Ellipsis,
-            maxLines = 2,
-            modifier = Modifier
-                .padding(
-                    start = 16.dp,
-                    top = 16.dp
+        Row(
+            modifier = Modifier.padding(
+                top = 16.dp,
+                start = 16.dp,
+                end = 16.dp
+            )
+        ) {
+            Text(
+                text = petDetails.name,
+                style = MaterialTheme.typography.h5,
+                color = MaterialTheme.colors.onSecondary,
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 2,
+                modifier = Modifier.weight(0.75f)
+            )
+            Button(
+                onClick = { /* TODO: Implement adopt me feature */ },
+                modifier = Modifier.weight(0.25f)
+            ) {
+                Text(
+                    text = stringResource(id = R.string.pets_details_adopt_me),
+                    style = MaterialTheme.typography.button
                 )
-        )
+            }
+        }
         Text(
             text = stringResource(id = genderRes),
             style = MaterialTheme.typography.h6,

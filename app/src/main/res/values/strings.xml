@@ -24,4 +24,5 @@
     <string name="pets_details_adoption_fee">Adoption fee:</string>
     <string name="pets_details_birthdate">Birthdate:</string>
     <string name="pets_details_contact_number">Contact number:</string>
+    <string name="pets_details_adopt_me">Adopt!</string>
 </resources>

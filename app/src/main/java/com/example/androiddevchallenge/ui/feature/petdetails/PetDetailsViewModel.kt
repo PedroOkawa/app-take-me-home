@@ -60,6 +60,7 @@ class PetDetailsViewModel @Inject constructor(
     }
 
     private fun onGetPetDetailsError(throwable: Throwable) {
+        throwable.printStackTrace()
         _state.value = ViewIntent.Error
     }
 }

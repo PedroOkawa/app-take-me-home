@@ -29,11 +29,11 @@ import com.example.androiddevchallenge.R
 
 @Composable
 fun AppBar(
-    title: @Composable () -> Unit = { },
     @DrawableRes navigationIcon: Int = R.drawable.ic_pets_24,
     backgroundColor: Color = MaterialTheme.colors.primary,
     contentColor: Color = contentColorFor(backgroundColor = backgroundColor),
-    onNavIconPressed: () -> Unit = { }
+    onNavIconPressed: () -> Unit = { },
+    title: @Composable () -> Unit = { }
 ) {
     TopAppBar(
         title = { title() },

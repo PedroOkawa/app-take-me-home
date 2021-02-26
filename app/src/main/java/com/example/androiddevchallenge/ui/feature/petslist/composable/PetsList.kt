@@ -67,11 +67,9 @@ fun PetsList(
 
     Scaffold(
         topBar = {
-            AppBar(
-                title = {
-                    Text(text = stringResource(id = R.string.app_name))
-                }
-            )
+            AppBar {
+                Text(text = stringResource(id = R.string.app_name))
+            }
         },
         content = {
             val viewIntentState by viewModel.state.collectAsState()
