@@ -9,6 +9,7 @@ An application that helps you take some cute friend home
 
 ## :bulb: Motivation and Context
 I'm pretty bad at designing layouts, but I guess the card is not that bad, at least. :thinking:
+And I tried to follow a clean architecture approach by separating data (Repositories), domain (Use cases) and ui (View Model and composable) layers and using Hilt DI to manage dependencies.
 
 
 ## :camera_flash: Screenshots
